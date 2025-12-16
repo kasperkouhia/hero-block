@@ -42,8 +42,8 @@ This starter uses a largely standard custom block file structure.
   - `index.js` - The entry point file for the block that gets loaded in the block editor.
   - `edit.js` - Used for rendering the block and the block's editing UI in the block editor.
   - `save.js` - Exports the function that returns the static HTML markup that gets saved in the WordPress database.
-  - `index.css` - Contains the styles for the block.
-  - Included is also the `block.js` file, imported in both `edit.js` and `save.js` to render the block. Edit this one to make changes to the rendered block.
+  - `index.css` - Contains the styles for the block. Used both in and outside the block editor.
+  - Included is also the `block.js` file, imported in both `edit.js` and `save.js` to render the block.
 - The `build` folder contains the compiled block(s) of the plugin.
 
 For more on the file structure of a (custom) block, go to: [https://developer.wordpress.org/block-editor/getting-started/fundamentals/file-structure-of-a-block/](https://developer.wordpress.org/block-editor/getting-started/fundamentals/file-structure-of-a-block/).
@@ -54,7 +54,7 @@ To start development on the block, navigate to the plugin's folder in `wp-conten
 
 Refer to the above section for information on each of the relevant files and folders of the plugin.
 
-If you just need to make changes to the rendered block, you need only to edit the `block.js` file.
+**If you just need to make changes to the rendered block, you need only to edit the `block.js` file!**
 
 When making changes to the block's files, use either the `start` or `build` scripts defined in `package.json`.
 
@@ -68,7 +68,7 @@ For more on the included scripts, go to: [https://developer.wordpress.org/block-
 
 ## Further Reading
 
-Used in the `edit.js` of this starter are a few components from the `@wordpress/block-editor`, `@wordpress/components`, and `@wordpress/i18n` packages.
+Used in the `edit.js` of this starter are a few imports from the `@wordpress/block-editor`, `@wordpress/components`, and `@wordpress/i18n` packages.
 
 Imported from `@wordpress/block-editor`:
 
