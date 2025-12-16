@@ -66,6 +66,32 @@ Both will output in the `build` folder.
 
 For more on the included scripts, go to: [https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/).
 
+## Further Reading
+
+Used in the `edit.js` of this starter are a few components from the `@wordpress/block-editor`, `@wordpress/components`, and `@wordpress/i18n` packages.
+
+Imported from `@wordpress/block-editor`:
+
+- `InspectorControls` - Container for the block's settings, its contents appear in the settings sidebar when the block is selected. For more, refer to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/inspector-controls/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/inspector-controls/README.md).
+- `MediaUpload` - Used for opening the WordPress media select and/or upload modal window. For more, refer to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/media-upload/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/media-upload/README.md).
+  - `MediaUploadCheck` - Wrapper used for `MediaUpload` to check whether or not the current user has the necessary permissions to upload new media to the site.
+- `usePropBlocks` - Hook used to mark an element as a block element. This is used to pass the necessary props to the outermost element returned by `edit.js`.
+
+For more on the `@wordpress/block-editor` package as a whole, go to: [https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/).
+
+Imported from `@wordpress/components`:
+
+- `Button` - Quite self-explanatory. Used for rendering buttons in the editor. For more, go to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/components/src/button/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/components/src/button/README.md).
+- `PanelBody` - Renders a collapsible container that can be toggled open or closed. For more, refer to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/components/src/panel/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/components/src/panel/README.md).
+  - `PanelRow` - Container for rows within a `PanelBody`.
+- `Placeholder` - Renders a placeholder element. For more, refer to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/components/src/placeholder/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/components/src/placeholder/README.md).
+
+For more on the `@wordpress/components` package as a whole, go to: [https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/).
+
+Also worth checking out are the WordPress Storybook docs at: [https://wordpress.github.io/gutenberg/](https://wordpress.github.io/gutenberg/).
+
+The sole import from `@wordpress/i18n` is `__`, which is used for retrieving the translations of strings. For more on the package, go to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/i18n/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/i18n/README.md).
+
 ## Author
 
 [Kasper Kouhia](https://github.com/kasperkouhia)
