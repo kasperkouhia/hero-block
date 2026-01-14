@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'hero-block/hero-block',
-		'version' => '1.0.1',
+		'version' => '1.0.2',
 		'title' => 'Hero Block',
 		'category' => 'custom-blocks',
 		'icon' => 'format-gallery',
