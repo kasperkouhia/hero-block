@@ -2,23 +2,14 @@
 .hero-block-preview {
 	position: relative;
 
-	.hero-block-foreground,
-	.hero-block-background {
-		display: flex;
-
-		img {
-			display: block;
-			width: 100%;
-			object-fit: cover;
-		}
-	}
-
 	.hero-block-foreground {
 		width: 60%;
 		aspect-ratio: 16 / 9;
 		margin: auto;
 		position: absolute;
-		inset: 0 auto 0 0;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
 		z-index: 1;
 	}
 
@@ -26,6 +17,14 @@
 		aspect-ratio: 11 / 8;
 		margin-left: 40%;
 		opacity: 75%;
+	}
+
+	.hero-block-foreground img,
+	.hero-block-background img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
