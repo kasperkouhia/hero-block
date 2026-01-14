@@ -75,7 +75,7 @@ Imported from `@wordpress/block-editor`:
 - `InspectorControls` - Container for the block's settings, its contents appear in the settings sidebar when the block is selected. For more, refer to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/inspector-controls/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/inspector-controls/README.md).
 - `MediaUpload` - Used for opening the WordPress media select and/or upload modal window. For more, refer to: [https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/media-upload/README.md](https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/media-upload/README.md).
   - `MediaUploadCheck` - Wrapper used for `MediaUpload` to check whether or not the current user has the necessary permissions to upload new media to the site.
-- `usePropBlocks` - Hook used to mark an element as a block element. This is used to pass the necessary props to the outermost element returned by `edit.js`.
+- `usePropBlocks` - Hook used to mark an element as a block element. This is used to pass the necessary props to the block's outermost element rendered in both `edit.js` and `save.js`.
 
 For more on the `@wordpress/block-editor` package as a whole, go to: [https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/).
 
