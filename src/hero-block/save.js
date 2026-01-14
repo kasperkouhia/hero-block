@@ -1,5 +1,8 @@
+import { useBlockProps } from "@wordpress/block-editor";
 import Block from "./block";
 
 export default function Save({ attributes }) {
-	return <Block className="hero-block" attributes={attributes} />;
+	const blockProps = useBlockProps.save({ className: "hero-block" });
+
+	return <Block attributes={attributes} {...blockProps} />;
 }

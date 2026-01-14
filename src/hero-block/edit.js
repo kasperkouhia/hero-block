@@ -21,8 +21,10 @@ export default function Edit({ attributes, setAttributes }) {
 		backgroundImageUrl,
 	} = attributes;
 
+	const blockProps = useBlockProps({ className: "hero-block-preview" });
+
 	return (
-		<div {...useBlockProps()}>
+		<>
 			<InspectorControls>
 				<PanelBody title={__("Foreground Image", "hero-block")}>
 					<PanelRow>
@@ -80,7 +82,7 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 			{foregroundImageUrl && backgroundImageUrl ? (
-				<Block className="hero-block-preview" attributes={attributes} />
+				<Block attributes={attributes} {...blockProps} />
 			) : (
 				<Placeholder
 					label={__("Hero Block", "hero-block")}
@@ -98,6 +100,6 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				</Placeholder>
 			)}
-		</div>
+		</>
 	);
 }
