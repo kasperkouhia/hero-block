@@ -6,8 +6,6 @@ export default function Block({ attributes, ...rest }) {
 		backgroundImageAlt,
 	} = attributes;
 
-	if (!(foregroundImageUrl && backgroundImageUrl)) return;
-
 	return (
 		<div {...rest}>
 			<div className="hero-block-foreground">
