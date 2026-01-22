@@ -5,14 +5,18 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'hero-block/hero-block',
-		'version' => '1.0.2',
+		'version' => '1.0.3',
 		'title' => 'Hero Block',
 		'category' => 'custom-blocks',
 		'icon' => 'format-gallery',
 		'description' => 'A simple custom hero block.',
 		'textdomain' => 'hero-block',
 		'supports' => array(
-			'html' => false
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			)
 		),
 		'attributes' => array(
 			'foregroundImageId' => array(
