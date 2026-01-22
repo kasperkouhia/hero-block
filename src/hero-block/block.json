@@ -9,7 +9,8 @@
 	"description": "A simple custom hero block.",
 	"textdomain": "hero-block",
 	"supports": {
-		"html": false
+		"html": false,
+		"align": ["wide", "full"]
 	},
 	"attributes": {
 		"foregroundImageId": {

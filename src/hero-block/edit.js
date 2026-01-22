@@ -21,8 +21,6 @@ export default function Edit({ attributes, setAttributes }) {
 		backgroundImageUrl,
 	} = attributes;
 
-	const blockProps = useBlockProps({ className: "hero-block-preview" });
-
 	return (
 		<>
 			<InspectorControls>
@@ -81,25 +79,27 @@ export default function Edit({ attributes, setAttributes }) {
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			{foregroundImageUrl && backgroundImageUrl ? (
-				<Block attributes={attributes} {...blockProps} />
-			) : (
-				<Placeholder
-					label={__("Hero Block", "hero-block")}
-					className="hero-block-placeholder"
-				>
-					{!foregroundImageUrl && (
-						<p className="hero-block-notice">
-							&#9888; {__("No foreground image selected.", "hero-block")}
-						</p>
-					)}
-					{!backgroundImageUrl && (
-						<p className="hero-block-notice">
-							&#9888; {__("No background image selected.", "hero-block")}
-						</p>
-					)}
-				</Placeholder>
-			)}
+			<div {...useBlockProps()}>
+				{foregroundImageUrl && backgroundImageUrl ? (
+					<Block className="hero-block-preview" attributes={attributes} />
+				) : (
+					<Placeholder
+						label={__("Hero Block", "hero-block")}
+						className="hero-block-placeholder"
+					>
+						{!foregroundImageUrl && (
+							<p className="hero-block-notice">
+								&#9888; {__("No foreground image selected.", "hero-block")}
+							</p>
+						)}
+						{!backgroundImageUrl && (
+							<p className="hero-block-notice">
+								&#9888; {__("No background image selected.", "hero-block")}
+							</p>
+						)}
+					</Placeholder>
+				)}
+			</div>
 		</>
 	);
 }
