@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Hero Block
  * Description:       A simple custom hero block for WordPress.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Kasper Kouhia
